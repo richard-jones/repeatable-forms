@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form data-behavior="work-form" data-param-key="dataset" class="simple_form new_dataset" id="new_dataset"
+      enctype="multipart/form-data" action="/concern/datasets?locale=en" accept-charset="UTF-8" method="post">
+
+    <div class="multi-nested" data-index-rx="(dataset\[[^\]]+\]\[)(\d+)(\].*)">
+        <div class="form-group nested_specimen_type optional dataset_specimen_type">
+            <label class="control-label nested_specimen_type optional" for="dataset_specimen_type">Specimen type</label>
+            <ul class="listing" aria-live="polite">
+                <li class="field-wrapper">
+                    <div class="row">
+                        <div class="col-md-3"><label for="dataset[specimen_type_attributes][0][title][]">Title</label></div>
+                        <div class="col-md-9"><input
+                                class="string nested_specimen_type optional  dataset_specimen_type form-control multi-text-field"
+                                data-name="specimen_type" name="dataset[specimen_type_attributes][0][title][]"
+                                id="dataset[specimen_type_attributes][0][title][]"
+                                aria-labelledby="dataset_specimen_type_label" type="text"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"><label for="dataset[specimen_type_attributes][0][chemical_composition][]">Chemical
+                            composition</label></div>
+                        <div class="col-md-9"><input
+                                class="string nested_specimen_type optional  dataset_specimen_type form-control multi-text-field"
+                                data-name="specimen_type"
+                                name="dataset[specimen_type_attributes][0][chemical_composition][]"
+                                id="dataset[specimen_type_attributes][0][chemical_composition][]"
+                                aria-labelledby="dataset_specimen_type_label" type="text"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"><label
+                                for="dataset[specimen_type_attributes][0][crystallographic_structure][]">Crystallographic
+                            structure</label></div>
+                        <div class="col-md-9"><input
+                                class="string nested_specimen_type optional  dataset_specimen_type form-control multi-text-field"
+                                data-name="specimen_type"
+                                name="dataset[specimen_type_attributes][0][crystallographic_structure][]"
+                                id="dataset[specimen_type_attributes][0][crystallographic_structure][]"
+                                aria-labelledby="dataset_specimen_type_label" type="text"></div>
+                    </div>
+                    <div class="multi-nested" data-index-rx="(dataset\[[^\]]+\]\[\d+\]\[[^\]]+\]\[)(\d+)(\].*)">
+                        <ul class="listing" aria-live="polite">
+                            <li class="field-wrapper">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label for="dataset[specimen_type_attributes][0][material_types][0]">Material
+                                            types</label></div>
+                                    <div class="col-md-9"><select name="dataset[specimen_type_attributes][0][material_types][0]"
+                                                                  id="dataset[specimen_type_attributes][0][material_types][0]" label=""
+                                                                  class="select form-control">
+                                        <option value="">Select material type</option>
+                                        <option value="biological">biological/生物学的物質</option>
+                                        <option value="biomaterials">biomaterials/生体材料</option>
+                                        <option value="ceramics">ceramics/セラミックス</option>
+                                        <option value="ceramics -- carbides">ceramics/セラミックス -- carbides/炭化物</option>
+                                        <option value="ceramics -- cements">ceramics/セラミックス -- cements/セメント</option>
+                                        <option value="ceramics -- nitrides">ceramics/セラミックス -- nitrides/窒化物</option>
+                                        <option value="ceramics -- oxides">ceramics/セラミックス -- oxides/酸化物</option>
+                                        <option value="ceramics -- perovskites">ceramics/セラミックス -- perovskites/ペロブスカイト</option>
+                                        <option value="ceramics -- silicates">ceramics/セラミックス -- silicates/シリケート</option>
+                                        <option value="metals and alloys">metals and alloys/金属・合金</option>
+                                        <option value="metals and alloys -- Al-containing">metals and alloys/金属・合金 --
+                                            Al-containing/Al含有物質
+                                        </option>
+                                        <option value="metals and alloys -- Cu-containing">metals and alloys/金属・合金 --
+                                            Cu-containing/Cu含有物質
+                                        </option>
+                                        <option value="metals and alloys -- Fe-containing">metals and alloys/金属・合金 --
+                                            Fe-containing/Fe含有物質
+                                        </option>
+                                        <option value="metals and alloys -- Mg-containing">metals and alloys/金属・合金 --
+                                            Mg-containing/Mg含有物質
+                                        </option>
+                                        <option value="metals and alloys -- Ni-containing">metals and alloys/金属・合金 --
+                                            Ni-containing/Ni含有物質
+                                        </option>
+                                        <option value="metals and alloys -- Ti-containing">metals and alloys/金属・合金 --
+                                            Ti-containing/Ti含有物質
+                                        </option>
+                                        <option value="metals and alloys -- commercially pure metals">metals and alloys/金属・合金 --
+                                            commercially pure metals/商用純粋金属
+                                        </option>
+                                        <option value="metals and alloys -- intermetallics">metals and alloys/金属・合金 --
+                                            intermetallics/金属間化合物
+                                        </option>
+                                        <option value="metals and alloys -- rare earths">metals and alloys/金属・合金 -- rare
+                                            earths/希土類
+                                        </option>
+                                        <option value="metals and alloys -- refractories">metals and alloys/金属・合金 --
+                                            refractories/耐火物
+                                        </option>
+                                        <option value="metals and alloys -- steels">metals and alloys/金属・合金 -- steels/鋼</option>
+                                        <option value="metals and alloys -- superalloys">metals and alloys/金属・合金 --
+                                            superalloys/超合金
+                                        </option>
+                                        <option value="metamaterials">metamaterials/メタマテリアル</option>
+                                        <option value="molecular fluids">molecular fluids/分子流体</option>
+                                        <option value="organic compounds">organic compounds/有機化合物</option>
+                                        <option value="organic compounds -- amines">organic compounds/有機化合物 -- amines/アミン類</option>
+                                        <option value="organic compounds -- carboxylic acids">organic compounds/有機化合物 -- carboxylic
+                                            acids/カルボン酸
+                                        </option>
+                                        <option value="organic compounds -- nitriles">organic compounds/有機化合物 -- nitriles/ニトリル
+                                        </option>
+                                        <option value="organometallics">organometallics/有機金属</option>
+                                        <option value="polymers">polymers/ポリマー</option>
+                                        <option value="polymers -- copolymers">polymers/ポリマー -- copolymers/コポリマー</option>
+                                        <option value="polymers -- elastomers">polymers/ポリマー -- elastomers/エラストマー</option>
+                                        <option value="polymers -- homopolymers">polymers/ポリマー -- homopolymers/ホモポリマー</option>
+                                        <option value="polymers -- liquid crystals">polymers/ポリマー -- liquid crystals/液晶</option>
+                                        <option value="polymers -- polymer blends">polymers/ポリマー -- polymer blends/ポリマーブレンド</option>
+                                        <option value="polymers -- rubbers">polymers/ポリマー -- rubbers/ゴム</option>
+                                        <option value="polymers -- thermoplastics">polymers/ポリマー -- thermoplastics/熱可塑性プラスチック
+                                        </option>
+                                        <option value="polymers -- thermosets">polymers/ポリマー -- thermosets/熱硬化性樹脂</option>
+                                        <option value="semiconductors">semiconductors/半導体</option>
+                                        <option value="semiconductors -- II-VI">semiconductors/半導体 -- II-VI/II-VI</option>
+                                        <option value="semiconductors -- III-V">semiconductors/半導体 -- III-V/III-V</option>
+                                        <option value="semiconductors -- extrinsic">semiconductors/半導体 -- extrinsic/外因性(extrinsic)
+                                        </option>
+                                        <option value="semiconductors -- intrinsic">semiconductors/半導体 -- intrinsic/固有(intrinsic)
+                                        </option>
+                                        <option value="semiconductors -- n-type">semiconductors/半導体 -- n-type/n型</option>
+                                        <option value="semiconductors -- nitrides">semiconductors/半導体 -- nitrides/窒化物</option>
+                                        <option value="semiconductors -- p-type">semiconductors/半導体 -- p-type/p型</option>
+                                        <option value="semiconductors -- silicon">semiconductors/半導体 -- silicon/シリコン</option>
+                                    </select></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <button type="button" class="btn btn-link remove"><span
+                                                class="glyphicon glyphicon-remove"></span> <span
+                                                class="controls-remove-text">Remove</span> <span class="sr-only"> previous <span
+                                                class="controls-field-name-text"> material type</span></span></button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-link add">
+                            <span class="glyphicon glyphicon-plus"></span>
+                            <span class="controls-add-text">Add another materials type</span>
+                        </button>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3"><label for="dataset[specimen_type_attributes][0][structural_features][]">Structural
+                            features</label></div>
+                        <div class="col-md-9"><select name="dataset[specimen_type_attributes][0][structural_features][]"
+                                                      id="dataset[specimen_type_attributes][0][structural_features][]"
+                                                      class="select form-control">
+                            <option value="">Select material type</option>
+                            <option value="composites">composites/複合材料</option>
+                            <option value="composites -- biological or green">composites/複合材料 -- biological or
+                                green/生物学的またはグリーン
+                            </option>
+                            <option value="composites -- fiber-reinforced">composites/複合材料 -- fiber-reinforced/繊維強化
+                            </option>
+                            <option value="composites -- metal-matrix">composites/複合材料 -- metal-matrix/金属マトリックス</option>
+                            <option value="composites -- nanocomposites">composites/複合材料 -- nanocomposites/ナノコンポジット
+                            </option>
+                            <option value="composites -- particle-reinforced">composites/複合材料 --
+                                particle-reinforced/粒子強化
+                            </option>
+                            <option value="composites -- polymer-matrix">composites/複合材料 -- polymer-matrix/ポリマーマトリックス
+                            </option>
+                            <option value="composites -- structural">composites/複合材料 -- structural/構造</option>
+                            <option value="defects">defects/欠陥</option>
+                            <option value="defects -- cracks">defects/欠陥 -- cracks/クラック</option>
+                            <option value="defects -- crazing">defects/欠陥 -- crazing/ひび割れ(crazing)</option>
+                            <option value="defects -- debonding">defects/欠陥 -- debonding/脱結合</option>
+                            <option value="defects -- disclinations">defects/欠陥 -- disclinations/回位</option>
+                            <option value="defects -- dislocations">defects/欠陥 -- dislocations/転位</option>
+                            <option value="defects -- inclusions">defects/欠陥 -- inclusions/内包物</option>
+                            <option value="defects -- interstitials">defects/欠陥 -- interstitials/インタースティシャル</option>
+                            <option value="defects -- point defects">defects/欠陥 -- point defects/点欠陥</option>
+                            <option value="defects -- pores">defects/欠陥 -- pores/細孔(pore)</option>
+                            <option value="defects -- vacancies">defects/欠陥 -- vacancies/空孔(vacancy)</option>
+                            <option value="defects -- voids">defects/欠陥 -- voids/空隙(void)</option>
+                            <option value="engineered structures">engineered structures/工学的構造</option>
+                            <option value="interfacial">interfacial/界面</option>
+                            <option value="interfacial -- grain boundaries">interfacial/界面 -- grain boundaries/粒界
+                            </option>
+                            <option value="interfacial -- interfacial surface area">interfacial/界面 -- interfacial
+                                surface area/表面・界面領域
+                            </option>
+                            <option value="interfacial -- magnetic domain walls">interfacial/界面 -- magnetic domain
+                                walls/磁壁
+                            </option>
+                            <option value="interfacial -- ordering boundaries">interfacial/界面 -- ordering
+                                boundaries/秩序境界(ordering boundary)
+                            </option>
+                            <option value="interfacial -- phase boundaries">interfacial/界面 -- phase boundaries/相境界
+                            </option>
+                            <option value="interfacial -- stacking faults">interfacial/界面 -- stacking faults/積層欠陥
+                            </option>
+                            <option value="interfacial -- surfaces">interfacial/界面 -- surfaces/表面</option>
+                            <option value="interfacial -- twin boundaries">interfacial/界面 -- twin boundaries/双境界
+                            </option>
+                            <option value="microstructures">microstructures/微細構造(microstructure)</option>
+                            <option value="microstructures -- cellular">microstructures/微細構造(microstructure) --
+                                cellular/細胞
+                            </option>
+                            <option value="microstructures -- clustering">microstructures/微細構造(microstructure) --
+                                clustering/クラスタリング
+                            </option>
+                            <option value="microstructures -- compound">microstructures/微細構造(microstructure) --
+                                compound/化合物
+                            </option>
+                            <option value="microstructures -- crystallinity">microstructures/微細構造(microstructure) --
+                                crystallinity/結晶性
+                            </option>
+                            <option value="microstructures -- defect structures">microstructures/微細構造(microstructure) --
+                                defect structures/欠陥構造
+                            </option>
+                            <option value="microstructures -- dendritic">microstructures/微細構造(microstructure) --
+                                dendritic/樹枝状
+                            </option>
+                            <option value="microstructures -- dispersion">microstructures/微細構造(microstructure) --
+                                dispersion/分散
+                            </option>
+                            <option value="microstructures -- eutectic">microstructures/微細構造(microstructure) --
+                                eutectic/共晶
+                            </option>
+                            <option value="microstructures -- grains">microstructures/微細構造(microstructure) -- grains/粒
+                            </option>
+                            <option value="microstructures -- nanocrystalline">microstructures/微細構造(microstructure) --
+                                nanocrystalline/ナノ結晶
+                            </option>
+                            <option value="microstructures -- particle distribution">
+                                microstructures/微細構造(microstructure) -- particle distribution/粒子分布
+                            </option>
+                            <option value="microstructures -- particle shape">microstructures/微細構造(microstructure) --
+                                particle shape/粒子形状
+                            </option>
+                            <option value="microstructures -- polycrystalline">microstructures/微細構造(microstructure) --
+                                polycrystalline/多結晶
+                            </option>
+                            <option value="microstructures -- polydispersity">microstructures/微細構造(microstructure) --
+                                polydispersity/多分散性
+                            </option>
+                            <option value="microstructures -- porosity">microstructures/微細構造(microstructure) --
+                                porosity/空隙率(porosity)
+                            </option>
+                            <option value="microstructures -- precipitates">microstructures/微細構造(microstructure) --
+                                precipitates/沈殿物(precipitate)
+                            </option>
+                            <option value="microstructures -- quasicrystalline">microstructures/微細構造(microstructure) --
+                                quasicrystalline/準結晶
+                            </option>
+                            <option value="microstructures -- single crystal">microstructures/微細構造(microstructure) --
+                                single crystal/単結晶
+                            </option>
+                            <option value="microstructures -- twinned">microstructures/微細構造(microstructure) --
+                                twinned/双晶
+                            </option>
+                            <option value="molecular structure">molecular structure/分子構造</option>
+                            <option value="molecular structure -- alternating copolymer">molecular structure/分子構造 --
+                                alternating copolymer/交互共重合体
+                            </option>
+                            <option value="molecular structure -- block copolymer">molecular structure/分子構造 -- block
+                                copolymer/ブロック共重合体
+                            </option>
+                            <option value="molecular structure -- dendrimer">molecular structure/分子構造 --
+                                dendrimer/デンドリマー
+                            </option>
+                            <option value="molecular structure -- end-group composition">molecular structure/分子構造 --
+                                end-group composition/末端基組成
+                            </option>
+                            <option value="molecular structure -- functionalization">molecular structure/分子構造 --
+                                functionalization/機能化
+                            </option>
+                            <option value="molecular structure -- gradient copolymer">molecular structure/分子構造 --
+                                gradient copolymer/グラジエントコポリマー
+                            </option>
+                            <option value="molecular structure -- long-chain branching">molecular structure/分子構造 --
+                                long-chain branching/長鎖分岐
+                            </option>
+                            <option value="molecular structure -- random copolymer">molecular structure/分子構造 -- random
+                                copolymer/ランダム共重合体
+                            </option>
+                            <option value="molecular structure -- short-chain branching">molecular structure/分子構造 --
+                                short-chain branching/短鎖分岐
+                            </option>
+                            <option value="molecular structure -- surfactants">molecular structure/分子構造 --
+                                surfactants/界面活性剤
+                            </option>
+                            <option value="molecular structure -- tacticity">molecular structure/分子構造 --
+                                tacticity/立体規則性
+                            </option>
+                            <option value="morphologies">morphologies/形態</option>
+                            <option value="morphologies -- aligned">morphologies/形態 -- aligned/整列状態</option>
+                            <option value="morphologies -- amorphous">morphologies/形態 -- amorphous/アモルファス</option>
+                            <option value="morphologies -- clusters">morphologies/形態 -- clusters/クラスタ</option>
+                            <option value="morphologies -- complex fluids">morphologies/形態 -- complex fluids/複雑流体
+                            </option>
+                            <option value="morphologies -- glass">morphologies/形態 -- glass/ガラス</option>
+                            <option value="morphologies -- layered">morphologies/形態 -- layered/層状</option>
+                            <option value="morphologies -- nanoparticles or nanotubes">morphologies/形態 -- nanoparticles
+                                or nanotubes/ナノ粒子_ナノチューブ
+                            </option>
+                            <option value="morphologies -- one-dimensional">morphologies/形態 -- one-dimensional/1次元
+                            </option>
+                            <option value="morphologies -- open-framework">morphologies/形態 --
+                                open-framework/オープンフレームワーク
+                            </option>
+                            <option value="morphologies -- particles or colloids">morphologies/形態 -- particles or
+                                colloids/粒子_コロイド
+                            </option>
+                            <option value="morphologies -- porous">morphologies/形態 -- porous/多孔質</option>
+                            <option value="morphologies -- quantum dots or wires">morphologies/形態 -- quantum dots or
+                                wires/量子ドット_ワイヤ
+                            </option>
+                            <option value="morphologies -- random">morphologies/形態 -- random/ランダム</option>
+                            <option value="morphologies -- semicrystalline">morphologies/形態 -- semicrystalline/半結晶質
+                            </option>
+                            <option value="morphologies -- thin film">morphologies/形態 -- thin film/薄膜</option>
+                            <option value="morphologies -- two-dimensional">morphologies/形態 -- two-dimensional/2次元
+                            </option>
+                            <option value="morphologies -- wires">morphologies/形態 -- wires/ワイヤー</option>
+                            <option value="morphologies -- woven">morphologies/形態 -- woven/織物(woven)</option>
+                            <option value="phases">phases/相</option>
+                            <option value="phases -- crystalline">phases/相 -- crystalline/結晶</option>
+                            <option value="phases -- disordered">phases/相 -- disordered/無秩序性</option>
+                            <option value="phases -- gas">phases/相 -- gas/ガス</option>
+                            <option value="phases -- liquid">phases/相 -- liquid/液体</option>
+                            <option value="phases -- melt">phases/相 -- melt/溶融(melt)</option>
+                            <option value="phases -- metastable">phases/相 -- metastable/準安定</option>
+                            <option value="phases -- nonequilibrium">phases/相 -- nonequilibrium/非平衡</option>
+                            <option value="phases -- ordered">phases/相 -- ordered/秩序性</option>
+                        </select></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"><label
+                                for="dataset[specimen_type_attributes][0][description][]">Description</label></div>
+                        <div class="col-md-6"><input
+                                class="string nested_specimen_type optional  dataset_specimen_type form-control multi-text-field"
+                                data-name="specimen_type" name="dataset[specimen_type_attributes][0][description][]"
+                                id="dataset[specimen_type_attributes][0][description][]"
+                                aria-labelledby="dataset_specimen_type_label" type="text"></div>
+                        <div class="col-md-3"><input name="dataset[specimen_type_attributes][0][_destroy]"
+                                                     id="dataset_specimen_type_attributes_0__destroy" value="false"
+                                                     data-destroy="true" class="form-control remove-hidden"
+                                                     type="hidden">
+                            <button type="button" class="btn btn-link remove"><span
+                                    class="glyphicon glyphicon-remove"></span> <span
+                                    class="controls-remove-text">Remove</span> <span class="sr-only"> previous <span
+                                    class="controls-field-name-text"> Specimen type</span></span></button>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <button type="button" class="btn btn-link add">
+            <span class="glyphicon glyphicon-plus"></span>
+            <span class="controls-add-text">Add another specimen type</span>
+        </button>
+    </div>
+
+</form>
+
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="repeater.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        repeater.init({
+            repeatableSelector: ".multi-nested",
+            repeatableList: "ul",
+            repeatableSection: "li",
+            removeSelector: ".remove",
+            addSelector: ".add",
+            formControl: ".form-control"
+        });
+    });
+</script>
+
+</body>
+</html>

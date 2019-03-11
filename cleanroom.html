@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .repeatable {
+            border: 1px solid red;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .repeatable-list {
+            border: 1px dotted blue;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .repeatable-section {
+            border: 1px dashed green;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <div class="repeatable" data-index-rx="([^\[]+\[)(\d+)(\].*)">
+            <div class="repeatable-list">
+                <div class="repeatable-section">
+                    <label for="top[0]alpha">Alpha</label>
+                    <input class="form-control" type="text" name="top[0]alpha" id="top[0]alpha"><br>
+
+                    <div class="repeatable" data-index-rx="([^\[]+\[\d+\][^\[]+\[)(\d+)(\].*)">
+                        <div class="repeatable-list">
+                            <div class="repeatable-section">
+                                <label for="top[0]gamma[0]">Gamma</label>
+                                <input class="form-control" type="text" name="top[0]gamma[0]" id="top[0]gamma[0]"><br>
+
+                                <div class="repeatable" data-index-rx="([^\[]+\[\d+\][^\[]+\[\d+\][^\[]+\[)(\d+)(\].*)">
+                                    <div class="repeatable-list">
+                                        <div class="repeatable-section">
+                                            <label for="top[0]gamma[0]omega[0]">Omega</label>
+                                            <input class="form-control" type="text" name="top[0]gamma[0]omega[0]" id="top[0]gamma[0]omega[0]"><br>
+
+                                            <label for="top[0]gamma[0]zeta[0]">Zeta</label>
+                                            <input class="form-control" type="text" name="top[0]gamma[0]zeta[0]" id="top[0]gamma[0]zeta[0]"><br>
+
+                                            <button class="remove">Remove</button>
+                                        </div>
+                                    </div>
+                                    <button class="add">Add</button>
+                                </div>
+
+                                <label for="top[0]delta[0]">Delta</label>
+                                <input class="form-control" type="text" name="top[0]delta[0]" id="top[0]delta[0]"><br>
+
+                                <button class="remove">Remove</button>
+                            </div>
+                        </div>
+                        <button class="add">Add</button>
+                    </div>
+
+                    <label for="top[0]beta">Beta</label>
+                    <input class="form-control" type="text" name="top[0]beta" id="top[0]beta"><br>
+
+                    <button class="remove">Remove</button>
+                </div>
+            </div>
+            <button class="add">Add</button>
+        </div>
+    </form>
+
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="repeater.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            repeater.init({
+                repeatableSelector: ".repeatable",
+                repeatableList: ".repeatable-list",
+                repeatableSection: ".repeatable-section",
+                removeSelector: ".remove",
+                addSelector: ".add",
+                formControl: ".form-control"
+            });
+        });
+    </script>
+</body>
+</html>
