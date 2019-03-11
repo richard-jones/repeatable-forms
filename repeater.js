@@ -82,6 +82,13 @@ var repeater = {
         });
     },
 
+    _getDirectRepeatable : function(container) {
+        return container.find(repeater.config.repeatableSelector).not(function(index) {
+            var nearest = $(this).closest(repeater.config.repeatableSelector);
+            return nearest[0] !== container[0];
+        });
+    },
+
     _newSection : function(params) {
         var newSection = params.template.clone();
 
@@ -96,9 +103,9 @@ var repeater = {
     _pruneSubsections : function(params) {
         var parent = params.parent;
 
-        var subs = parent.find(repeater.config.repeatableSelector);
+        var subs = repeater._getDirectRepeatable(parent);
         subs.each(function() {
-            var sections = $(this).find(repeater.config.repeatableSection);
+            var sections = repeater._getDirectRepeatableSections($(this));
             // remove all but the first section
             for (var i = 1; i < sections.length; i++) {
                 $(sections[i]).remove();
