@@ -82,10 +82,10 @@ var repeater = {
         });
     },
 
-    _getDirectRepeatable : function(container) {
-        return container.find(repeater.config.repeatableSelector).not(function(index) {
-            var nearest = $(this).closest(repeater.config.repeatableSelector);
-            return nearest[0] !== container[0];
+    _getDirectRepeatable : function(section) {
+        return section.find(repeater.config.repeatableSelector).not(function(index) {
+            var nearest = $(this).closest(repeater.config.repeatableSection);
+            return nearest[0] !== section[0];
         });
     },
 
